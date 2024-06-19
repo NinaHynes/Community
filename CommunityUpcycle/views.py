@@ -9,7 +9,7 @@ def communityupcycle_list(request):
   return render(request, 'communityupcycle/communityupcycle_list.html', {'listings': listings})
 
 def communityupcycle_detail(request, pk):
-  listing = get_object_or_404(CommunityUpcycleListing, pk=pk)  # Get specific listing by primary key (pk)
+  listing = get_object_or_404(CommunityUpcycleListing, pk=pk) 
   return render(request, 'communityupcycle/communityupcycle_detail.html', {'listing': listing})
 
 def communityupcycle_create(request):
@@ -24,5 +24,5 @@ def communityupcycle_create(request):
     form = CommunityUpcycleListingForm()
   return render(request, 'communityupcycle/communityupcycle_create.html', {'form': form})
 
-# Additional views for editing and deleting listings can be added here
+
 
